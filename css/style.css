@@ -8,6 +8,8 @@
 .container {
     width: 100vw;
     height: 100vh;
+    background-color: var(--main-color);
+    color: var(--text-color);
 }
 
 .wrapper {
@@ -23,33 +25,31 @@ header {
     margin-bottom: 24px;
 }
 
+:root{
+    --main-color: #141D2F;
+    --wrap-color: #1E2A47;
+    --text-color: #fff;
+    --shadow: 0;
+}
+
 .light {
-    background-color: #fff;
-    color: #000;
-    box-shadow: 3px 20px 30px -10px rgba(67, 89, 172, 0.2);
+    --main-color: #fff;
+    --wrap-color: #fff;
+    --text-color: #000;
+    --shadow: 3px 20px 30px -10px rgba(67, 89, 172, 0.2);
 }
 
-.dark {
+.btn {
     cursor: pointer;
-    background-color: #141D2F;
-    color: #fff;
-}
-
-.dark2{
-    background-color: #1E2A47;
-}
-
-.btn:hover * {
-    transition: 0.3s;
-    color: #90A4D4;
-    cursor: pointer;
-}
-
-header span {
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.btn:hover {
+    transition: 0.3s;
+    color: #90A4D4;
 }
 
 header i {
@@ -63,6 +63,8 @@ form {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 24px;
+    background-color: var(--wrap-color);
+    box-shadow: var(--shadow);
 }
 
 form i {
@@ -70,6 +72,7 @@ form i {
     font-size: 1.3rem;
     margin: 0 20px;
     cursor: pointer;
+    box-shadow: var(--shadow);
 }
 
 form input {
@@ -77,12 +80,12 @@ form input {
     outline: none;
     width: 70%;
     font-size: 1rem;
-    color: #fff;
+    color: var(--text-color);
     background-color: transparent;
 }
 
 input::placeholder{
-    color: #fff;
+    color: var(--text-color);
 }
 
 .search-btn {
@@ -107,6 +110,8 @@ input::placeholder{
 main {
     border-radius: 15px;
     padding: 40px;
+    background-color: var(--wrap-color);
+    box-shadow: var(--shadow);
 }
 
 .main-top {
@@ -156,11 +161,13 @@ main {
 
 .list {
     display: flex;
+    background-color: var(--main-color);
     justify-content: space-around;
     width: 500px;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 50px;
+    box-shadow: var(--shadow);
 }
 
 .links {
